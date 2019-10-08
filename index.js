@@ -17,11 +17,31 @@ const remove_item_array = (index, value) => {
 
 const isEmpty = function (value) {
     return (!value || value == "0" || 0 === value.length || Object.entries(value).length === 0 && value.constructor === Object);
- }
+}
+
+const convertRupiah = angka => {
+    let value = angka.toString().split(".")[0];
+    let rupiah = "";
+    let angkarev = value
+        .toString()
+        .split("")
+        .reverse()
+        .join("");
+    for (let i = 0; i < angkarev.length; i++)
+        if (i % 3 === 0) rupiah += angkarev.substr(i, 3) + ".";
+    return (
+        "Rp " +
+        rupiah
+            .split("", rupiah.length - 1)
+            .reverse()
+            .join("")
+    );
+};
 
 module.exports = {
     reverse_string,
     is_palindrome,
     remove_item_array,
-    isEmpty
+    isEmpty,
+    convertRupiah
 };
