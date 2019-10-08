@@ -7,4 +7,16 @@ const is_palindrome = (value) => {
     return clean == reverse_string(clean);
 }
 
-module.exports = {reverse_string, is_palindrome};
+const remove_item_array = (index, value) => {
+    if (typeof (index) == 'number' && Array.isArray(value)) {
+        return value.filter((s, sidx) => index !== sidx)
+    } else {
+        return null
+    }
+}
+
+module.exports = {
+    reverse_string,
+    is_palindrome,
+    remove_item_array
+};
