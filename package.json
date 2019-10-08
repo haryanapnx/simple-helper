@@ -1,5 +1,5 @@
 {
-  "name": "simple-helper",
+  "name": "@arsm/simple-helper",
   "version": "1.0.0",
   "description": "simple helper javascript",
   "main": "index.js",
@@ -12,5 +12,13 @@
     "helper"
   ],
   "author": "ariesm",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariesmaulana/simple-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ariesmaulana/simple-helper/issues"
+  },
+  "homepage": "https://github.com/ariesmaulana/simple-helper#readme"
 }
