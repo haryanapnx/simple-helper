@@ -15,8 +15,15 @@ const remove_item_array = (index, value) => {
     }
 }
 
+const is_prime = (value) => {
+    for(let i = 2; i < value; i++)
+        if(value % i == 0) return false;
+    return value > 1;
+}
+
 module.exports = {
     reverse_string,
     is_palindrome,
-    remove_item_array
+    remove_item_array,
+    is_prime
 };
