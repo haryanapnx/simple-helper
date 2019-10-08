@@ -15,6 +15,7 @@ const remove_item_array = (index, value) => {
     }
 }
 
+
 const isEmpty = function (value) {
     return (!value || value == "0" || 0 === value.length || Object.entries(value).length === 0 && value.constructor === Object);
 }
@@ -50,11 +51,28 @@ const titleCase = str => {
     return splitStr.join(" ");
 };
 
+const is_prime = (value) => {
+    for(let i = 2; i < value; i++)
+        if(value % i == 0) return false;
+    return value > 1;
+}
+
+const array_pick = (obj, props) => {
+	if (typeof obj !== 'object' || typeof props !== 'object') return;
+	var picked = {}
+	props.forEach(function(prop) {
+		picked[prop] = obj[prop];
+	})
+	return picked;
+}
+
 module.exports = {
     reverse_string,
     is_palindrome,
     remove_item_array,
     isEmpty,
     convertRupiah, 
-    titleCase
+    titleCase,
+    is_prime,
+    array_pick
 };
