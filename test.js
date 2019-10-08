@@ -8,3 +8,5 @@ assert.equal('rebot kcah', helper.reverse_string('hack tober'), 'github reverse 
 
 assert.equal(true, helper.is_palindrome('Repaper'), 'Repaper is palindrome');
 assert.equal(true, helper.is_palindrome('kakak'), 'kakak is palindrome');
+
+assert.equal(true, helper.is_prime(5), "5 is prime number");
