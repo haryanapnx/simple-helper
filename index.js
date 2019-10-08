@@ -26,11 +26,20 @@ const is_prime = (value) => {
     return value > 1;
 }
 
+const array_pick = (obj, props) => {
+	if (typeof obj !== 'object' || typeof props !== 'object') return;
+	var picked = {}
+	props.forEach(function(prop) {
+		picked[prop] = obj[prop];
+	})
+	return picked;
+}
 
 module.exports = {
     reverse_string,
     is_palindrome,
     remove_item_array,
     isEmpty,
-    is_prime
+    is_prime,
+    array_pick
 };
