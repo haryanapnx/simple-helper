@@ -8,6 +8,7 @@ assert.equal('rebot kcah', helper.reverse_string('hack tober'), 'github reverse 
 
 assert.equal(true, helper.is_palindrome('Repaper'), 'Repaper is palindrome');
 assert.equal(true, helper.is_palindrome('kakak'), 'kakak is palindrome');
+
 assert.equal([1,3], helper.remove_item_array(1,[1,2,3]), 'remove succes');
 
 assert.equal(true, helper.isEmpty(0), '0 is empty');
@@ -19,3 +20,6 @@ assert.equal(false, helper.isEmpty(1), '1 is not empty');
 assert.equal(true, helper.isEmpty("0"), '0 is empty');
 // true when value  = {}
 assert.equal(true, helper.isEmpty({}), '{} is empty');
+
+
+assert.equal(true, helper.is_prime(5), "5 is prime number");
