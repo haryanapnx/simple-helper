@@ -15,8 +15,13 @@ const remove_item_array = (index, value) => {
     }
 }
 
+const isEmpty = function (value) {
+    return (!value || value == "0" || 0 === value.length || Object.entries(value).length === 0 && value.constructor === Object);
+ }
+
 module.exports = {
     reverse_string,
     is_palindrome,
-    remove_item_array
+    remove_item_array,
+    isEmpty
 };
